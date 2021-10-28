@@ -1,0 +1,139 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* ====================================================================================================
+   new.html.erb
+ ==================================================================================================== */
+.account-new-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.account-new-section p {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  background-color: red;
+}
+
+.account-new-contents {
+  list-style-type: none;
+}
+
+.account-new-form {
+  margin-top: 10px;
+}
+
+.account-new-form:last-child {
+  margin-top: 20px;
+}
+
+.account-new-form span {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.account-new-input {
+  width: 290px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.account-new-button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  width: 342px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.account-new-link {
+  text-decoration: none;
+  color: blue;
+  margin-top: 20px;
+}
+
+/* ====================================================================================================
+   show.html.erb, edit.html.erb
+ ==================================================================================================== */
+.user-setting-section {
+  padding: 20px;
+}
+
+.user-setting-section table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.user-setting-section tr {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.user-setting-section th {
+  padding: 20px 10px;
+  width: 16%;
+}
+
+.user-setting-section td {
+  padding: 20px 10px;
+  width: 84%;
+}
+
+.user-setting-title {
+  font-size: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.user-setting-title:nth-of-type(2) {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.user-setting-input {
+  width: 348px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.user-setting-textarea {
+  width: 348px;
+  height: 120px;
+  font-size: 16px;
+}
+
+.user-setting-link {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px 0;
+  width: 10%;
+}
+
+.user-setting-icon {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+
+@media screen and (max-width: 1080px) {
+  .user-setting-notice {
+    display: none;
+  }
+}

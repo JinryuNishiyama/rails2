@@ -1,0 +1,389 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* ====================================================================================================
+   index.html.erb
+ ==================================================================================================== */
+.top-section1 {
+  position: relative;
+  background-image: url(/assets/img_cover_top.jpeg);
+  background-size: cover;
+  height: 650px;
+}
+
+.top-search {
+  position: absolute;
+  top: 200px;
+  left: 10%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 350px;
+}
+
+.top-search p {
+  font-size: 30px;
+}
+
+.top-form {
+  width: 98%;
+  height: 30px;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.top-button {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.top-section2 {
+  padding: 50px 100px;
+}
+
+.top-section2-contents {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.top-images {
+  display: flex;
+  justify-content: center;
+}
+
+.top-panel {
+  position: relative;
+  width: 22%;
+  margin: 15px;
+}
+
+@media screen and (max-width: 1080px) {
+  .top-section2 {
+    padding: 50px 0;
+  }
+  
+  .top-section2-contents {
+    max-width: 440px;
+  }
+  
+  .top-section2-contents h1 {
+    text-align: center;
+  }
+  
+  .top-images {
+    flex-wrap: wrap;
+  }
+  
+  .top-panel {
+    width: 43%;
+  }
+}
+
+.top-panel span {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.top-image {
+  border-radius: 5px;
+  width: 100%;
+  height: 400px;
+}
+
+/* ====================================================================================================
+   new.html.erb
+ ==================================================================================================== */
+.room-new-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.room-new-section p {
+  margin-bottom: 10px;
+}
+
+.room-new-contents {
+  list-style-type: none;
+}
+
+.room-new-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.room-new-form:last-child {
+  margin-top: 20px;
+}
+
+.room-new-form div {
+  display: flex;
+  align-items: center;
+}
+
+.room-new-form div span {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.room-new-input {
+  width: 290px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.room-new-file {
+  width: 298px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.room-new-textarea {
+  width: 292px;
+  height: 120px;
+  font-size: 16px;
+}
+
+.room-new-button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  width: 30%;
+  height: 45px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* ====================================================================================================
+   list.html.erb
+ ==================================================================================================== */
+.room-list-section {
+  padding: 20px;
+}
+
+.room-list-contents {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.room-list-contents p {
+  font-size: 24px;
+}
+
+.room-list-contents table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.room-list-contents tr {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.room-list-contents th, .room-list-contents td {
+  padding: 10px;
+  width: 30%;
+}
+
+.room-list-contents th:last-of-type, .room-list-contents td:last-of-type {
+  width: 10%;
+}
+
+.room-list-image {
+  width: 100%;
+  height: 200px;
+}
+
+/* ====================================================================================================
+   search.html.erb
+ ==================================================================================================== */
+.room-search-section {
+  padding: 30px;
+}
+
+.room-search-contents {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .room-search-contents {
+    max-width: 680px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .room-search-contents {
+    max-width: 340px;
+  }
+}
+
+.room-search-heading {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.room-search-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+}
+
+.room-search-link {
+  text-decoration: none;
+  width: 320px;
+  margin: 10px;
+}
+
+.room-search-item {
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+}
+
+.room-search-image {
+  width: 100%;
+  height: 200px;
+}
+
+.room-search-item p {
+  color: black;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.room-search-item p:first-of-type {
+  color: #808080;
+  font-size: 20px;
+}
+
+.room-search-item p:last-of-type {
+  text-align: right;
+}
+
+/* ====================================================================================================
+   show.html.erb
+ ==================================================================================================== */
+.room-show-section {
+  padding: 30px;
+}
+
+.room-show-contents {
+  display: flex;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.room-data-section {
+  width: 62%;
+  margin: 0 15px;
+}
+
+.room-show-image {
+  width: 100%;
+  height: 400px;
+}
+
+@media screen and (max-width: 1080px) {
+  .room-show-contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .room-data-section {
+    width: 612px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .room-data-section {
+    width: 300px;
+  }
+  
+  .room-show-image {
+    height: 200px;
+  }
+}
+
+.room-data-section p {
+  padding: 10px 10px;
+}
+
+.room-data-section p:first-of-type {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.room-data-section p:last-of-type {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.room-reserve-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dcdcdc;
+  width: 31%;
+  height: 410px;
+  padding: 20px;
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 1080px) {
+  .room-reserve-section {
+    width: 348px;
+    margin-top: 30px;
+  }
+}
+
+.room-reserve-section p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.room-reserve-section ul {
+  list-style-type: none;
+}
+
+.room-reserve-input {
+  font-size: 16px;
+  width: 290px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.room-reserve-button {
+  cursor: pointer;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+<div class="booking-show-section">
+  <div class="booking-show-contents">
+  <p>予約内容詳細</p>
+  <table>
+    <tr>
+      <th>予約したルーム名</th>
+      <td><%= @booking.room.title %></td>
+    </tr>
+    <tr>
+      <th>利用開始日</th>
+      <td><%= @booking.start_date %></td>
+    </tr>
+    <tr>
+      <th>利用終了日</th>
+      <td><%= @booking.end_date %></td>
+    </tr>
+    <tr>
+      <th>利用日数</th>
+      <td><%= @booking.days %>日</td>
+    </tr>
+    <tr>
+      <th>人数</th>
+      <td><%= @booking.customers %>人</td>
+    </tr>
+    <tr>
+      <th>合計金額</th>
+      <td><%= @booking.total_amount %>円</td>
+    </tr>
+  </table>
+  </div>
+</div>

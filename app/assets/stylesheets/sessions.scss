@@ -1,0 +1,59 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* ====================================================================================================
+   new.html.erb
+ ==================================================================================================== */
+.account-login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.account-login-section p {
+  margin-bottom: 10px;
+}
+
+.account-login {
+  list-style-type: none;
+}
+
+.account-login-form {
+  margin-top: 10px;
+}
+
+.account-login-form:last-child {
+  margin-top: 20px;
+}
+
+.account-login-form span {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.account-login-input {
+  width: 290px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.account-login-button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  width: 342px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.account-login-link {
+  text-decoration: none;
+  color: blue;
+  margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<div class="booking-new-section">
+  <p class="booking-new-heading">予約内容の確認</p>
+  
+  <%= render "shared/error", obj: @booking %>
+  
+  <ul class="booking-new-contents">
+    <li class="booking-new-info">
+      ルームID：<span class="booking-new-info-item"><%= @room.id %></span>
+    </li>
+    <li class="booking-new-info">
+      ルーム名：<span class="booking-new-info-item"><%= @room.title %></span>
+    </li>
+  </ul>
+  
+  <p>1人あたり ¥<%= @room.fee %> / 日</p>
+  
+  <ul class="booking-new-contents">
+    <%= form_with model: @booking do |f| %>
+      <li class="booking-new-form">
+        利用開始日：<%= f.text_field :start_date, readonly: true, class: "booking-new-input" %>
+      </li>
+      <li class="booking-new-form">
+        利用終了日：<%= f.text_field :end_date, readonly: true, class: "booking-new-input" %>
+      </li>
+      <li class="booking-new-form">
+        利用日数：<%= f.text_field :days, readonly: true, class: "booking-new-input" %>
+      </li>
+      <li class="booking-new-form">
+        人数：<%= f.text_field :customers, readonly: true, class: "booking-new-input" %>
+      </li>
+      <li class="booking-new-form">
+        合計金額：<%= f.text_field :total_amount, readonly: true, class: "booking-new-input" %>
+      </li>
+      
+      <p>以上の内容でよろしければ「予約を確定」を押してください</p>
+      
+      <li class="booking-new-form">
+        <%= f.submit "予約を確定", class: "booking-new-button" %>
+      </li>
+      <li class="booking-new-form">
+        <%= link_to "ルーム詳細に戻る", @room, class: "booking-new-link" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+<div class="account-login-section">
+  <p>ログイン</p>
+  
+  <ul class="account-login">
+    <%= form_with url: user_login_path do |f| %>
+      <li class="account-login-form">
+        <span>必須</span>
+        <%= f.email_field :email, placeholder: "メールアドレス", class: "account-login-input" %>
+      </li>
+      <li class="account-login-form">
+        <span>必須</span>
+        <%= f.password_field :password, placeholder: "パスワード", class: "account-login-input" %>
+      </li>
+      <li class="account-login-form">
+        <%= f.submit "ログイン", class: "account-login-button" %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%= link_to "新しいアカウントを作成", :new_user, class: "account-login-link" %>
+</div>

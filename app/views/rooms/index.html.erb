@@ -1,0 +1,33 @@
+<div class="top-section1">
+  <div class="top-search">
+    <p>ルームの検索</p>
+    <%= form_with url: rooms_search_path, method: :get do |f| %>
+      <%= f.text_field :keyword, class: "top-form" %>
+      <%= f.submit "検索", class: "top-button" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="top-section2">
+  <div class="top-section2-contents">
+    <h1>おすすめのエリア</h1>
+    <div class="top-images">
+      <div class="top-panel">
+        <%= link_to image_tag("img_tokyo.jpeg", class: "top-image"), rooms_search_path(area: "東京") %>
+        <span>東京</span>
+      </div>
+      <div class="top-panel">
+        <%= link_to image_tag("img_osaka.jpeg", class: "top-image"), rooms_search_path(area: "大阪") %>
+        <span>大阪</span>
+      </div>
+      <div class="top-panel">
+        <%= link_to image_tag("img_kyoto.jpeg", class: "top-image"), rooms_search_path(area: "京都") %>
+        <span>京都</span>
+      </div>
+      <div class="top-panel">
+        <%= link_to image_tag("img_sapporo.jpeg", class: "top-image"), rooms_search_path(area: "札幌") %>
+        <span>札幌</span>
+      </div>
+    </div>
+  </div>
+</div>
