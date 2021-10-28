@@ -1,0 +1,18 @@
+<div class="room-search-section">
+  <div class="room-search-contents">
+    <p class="room-search-heading">検索結果</p>
+    
+    <ul class="room-search-list">
+      <% @rooms.each do |room| %>
+        <%= link_to room, class: "room-search-link" do %>
+          <li class="room-search-item">
+            <%= image_tag room.image.url, class: "room-search-image" %>
+            <p><%= room.title %></p>
+            <p><%= room.address %></p>
+            <p>¥<%= room.fee %></p>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="room-list-section">
+  <div class="room-list-contents">
+    <p>登録済みルーム一覧</p>
+    
+    <table>
+      <tr>
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>ルーム情報</th>
+        <th>料金</th>
+      </tr>
+      
+      <% @rooms.each do |room| %>
+        <tr>
+          <td><%= image_tag room.image.url, class: "room-list-image" %></td>
+          <td><%= room.title %></td>
+          <td><%= room.information %></td>
+          <td>¥<%= room.fee %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="booking-list-section">
+  <div class="booking-list-contents">
+    <p>予約済みルーム一覧</p>
+    
+    <table>
+      <tr>
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>利用開始日</th>
+        <th>利用終了日</th>
+        <th>合計金額</th>
+        <th>予約内容</th>
+      </tr>
+      
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= image_tag booking.room.image.url, class: "booking-list-image" %></td>
+          <td>
+            <%= link_to room_path(booking.room_id), class: "booking-list-link" do %>
+              <%= booking.room.title %>
+            <% end %>
+          </td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td>¥<%= booking.total_amount %></td>
+          <td><%= link_to "詳細", booking, class: "booking-list-link" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

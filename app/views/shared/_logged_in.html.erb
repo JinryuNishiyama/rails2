@@ -1,0 +1,16 @@
+<div class="header-menu">
+  <span class="header-username"><%= current_user.name %></span>
+  <% if current_user.icon? %>
+    <%= image_tag current_user.icon.url, class: "header-icon" %>
+  <% else %>
+    <%= image_tag "default_icon.jpeg", class: "header-icon" %>
+  <% end %>
+</div>
+
+<div class="header-menu-box">
+  <%= link_to "ルーム登録", :new_room, class: "header-menu-item" %>
+  <%= link_to "登録済みルーム", :rooms_list, class: "header-menu-item" %>
+  <%= link_to "予約済みルーム", :bookings_list, class: "header-menu-item" %>
+  <%= link_to "設定", :user, class: "header-menu-item" %>
+  <%= link_to "ログアウト", :user_logout, method: :delete, class: "header-menu-item" %>
+</div>

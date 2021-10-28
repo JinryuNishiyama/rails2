@@ -1,0 +1,40 @@
+<div class="user-setting-section">
+  <h1>ユーザー設定</h1>
+  
+  <% if logged_in? %>
+    <p class="user-setting-title">アカウント</p>
+    <table>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= current_user.email %></td>
+      </tr>
+      <tr>
+        <th>パスワード</th>
+        <td>＊＊＊＊＊＊＊＊</td>
+      </tr>
+    </table>
+    
+    <p class="user-setting-title">プロフィール</p>
+    <table>
+      <tr>
+        <th>アイコン</th>
+        <td>
+          <% if current_user.icon? %>
+            <%= image_tag current_user.icon.url, class: "user-setting-icon" %>
+          <% else %>
+            <%= image_tag "default_icon.jpeg", class: "user-setting-icon" %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>名前</th>
+        <td><%= current_user.name %></td>
+      </tr>
+      <tr>
+        <th>自己紹介</th>
+        <td><%= current_user.introduction %></td>
+      </tr>
+    </table>
+    <%= link_to "編集", :edit_user, class: "user-setting-link" %>
+  <% end %>
+</div>

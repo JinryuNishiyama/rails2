@@ -1,0 +1,41 @@
+<div class="room-show-section">
+  <div class="room-show-contents">
+  <div class="room-data-section">
+    <%= image_tag @room.image.url, class: "room-show-image" %>
+    <p><%= @room.title %></p>
+    <p><%= @room.address %></p>
+    <p><%= @room.information %></p>
+  </div>
+  
+  <div class="room-reserve-section">
+    <p>1人あたり ¥<%= @room.fee %> / 日</p>
+    <ul>
+      <%= form_with url: new_booking_path, method: :get do |f| %>
+        <li>
+          <%= f.label :room_id, "ルームID" %>
+          <br>
+          <%= f.text_field :room_id, value: @room.id, readonly: true, class: "room-reserve-input" %>
+        </li>
+        <li>
+          <%= f.label :start_date, "利用開始日" %>
+          <br>
+          <%= f.date_field :start_date, class: "room-reserve-input" %>
+        </li>
+        <li>
+          <%= f.label :end_date, "利用終了日" %>
+          <br>
+          <%= f.date_field :end_date, class: "room-reserve-input" %>
+        </li>
+        <li>
+          <%= f.label :customers, "人数" %>
+          <br>
+          <%= f.number_field :customers, class: "room-reserve-input" %>
+        </li>
+        <li>
+          <%= f.submit "予約する", class: "room-reserve-button" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  </div>
+</div>

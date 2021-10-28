@@ -13,3 +13,133 @@
  *= require_tree .
  *= require_self
  */
+ 
+/* ====================================================================================================
+   application.html.erb
+ ==================================================================================================== */
+body, div, ul, li, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  overflow: scroll;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  width: 100%;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header-form-contents {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1080px) {
+  .header-form-contents {
+    display: none;
+  }
+}
+
+.header-form {
+  height: 30px;
+  font-size: 16px;
+}
+
+.header-search {
+  display: none;
+}
+
+.header-menu-box {
+  position: absolute;
+  top: 72px;
+  right: 0;
+  z-index: 1;
+  display: none;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.header-menu-item {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.notice {
+  background-color: #e0ffff;
+  font-weight: bold;
+}
+
+.alert {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* ====================================================================================================
+   _not_logged_in.html.erb, _logged_in.html.erb
+ ==================================================================================================== */
+.header-button {
+  text-decoration: none;
+  background-color: #808080;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.header-button:first-child {
+  background-color: blue;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-username {
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .header-username {
+    display: none;
+  }
+}
+
+.header-icon {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  margin-left: 10px;
+}
+
+/* ====================================================================================================
+   _error.html.erb
+ ==================================================================================================== */
+.error-message {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}

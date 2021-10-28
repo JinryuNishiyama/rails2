@@ -1,0 +1,47 @@
+<div class="user-setting-section">
+  <h1>ユーザー情報編集</h1>
+  
+  <% if logged_in? %>
+    <%= form_with model: current_user do |f| %>
+      <p class="user-setting-title">アカウント</p>
+      <table>
+        <tr>
+          <th><%= f.label :email, "メールアドレス" %></th>
+          <td><%= f.text_field :email, class: "user-setting-input" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :password, "パスワード" %></th>
+          <td>
+            <%= f.password_field :password, placeholder: "変更する場合のみ入力してください(8~16文字)", class: "user-setting-input" %>
+            <span class="user-setting-notice">※変更する場合のみ入力してください(8~16文字)</span>
+          </td>
+        </tr>
+        <tr>
+          <th><%= f.label :password_confirmation, "パスワード(確認用)" %></th>
+          <td>
+            <%= f.password_field :password_confirmation, placeholder: "変更する場合のみ入力してください(8~16文字)", class: "user-setting-input" %>
+            <span class="user-setting-notice">※変更する場合のみ入力してください(8~16文字)</span>
+          </td>
+        </tr>
+      </table>
+      
+      <p class="user-setting-title">プロフィール</p>
+      <table>
+        <tr>
+          <th><%= f.label :icon, "アイコン" %></th>
+          <td><%= f.file_field :icon, class: "user-setting-input" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :name, "名前" %></th>
+          <td><%= f.text_field :name, class: "user-setting-input" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :introduction, "自己紹介" %></th>
+          <td><%= f.text_area :introduction, class: "user-setting-textarea" %></td>
+        </tr>
+      </table>
+      
+      <%= f.submit "更新", class: "user-setting-link" %>
+    <% end %>
+  <% end %>
+</div>

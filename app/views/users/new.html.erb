@@ -1,0 +1,31 @@
+<div class="account-new-section">
+  <p>新しいアカウントを作成</p>
+  
+  <%= render "shared/error", obj: @user %>
+  
+  <ul class="account-new-contents">
+    <%= form_with model: @user, url: user_path do |f| %>
+      <li class="account-new-form">
+        <span>必須</span>
+        <%= f.text_field :name, placeholder: "ユーザー名", class: "account-new-input" %>
+      </li>
+      <li class="account-new-form">
+        <span>必須</span>
+        <%= f.email_field :email, placeholder: "メールアドレス", class: "account-new-input" %>
+      </li>
+      <li class="account-new-form">
+        <span>必須</span>
+        <%= f.password_field :password, placeholder: "パスワード(8~16文字)", class: "account-new-input" %>
+      </li>
+      <li class="account-new-form">
+        <span>必須</span>
+        <%= f.password_field :password_confirmation, placeholder: "パスワード確認(8~16文字)", class: "account-new-input" %>
+      </li>
+      <li class="account-new-form">
+        <%= f.submit "新しいアカウントを作成", class: "account-new-button" %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <%= link_to "すでにアカウントをお持ちの方はログイン", :user_login, class: "account-new-link" %>
+</div>
